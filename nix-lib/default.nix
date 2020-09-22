@@ -5,7 +5,7 @@ let
 in
 
 {
-  nsfpy = {
+  nsfPy = {
     shell = callPackage ./shell.nix {};
   };
 }

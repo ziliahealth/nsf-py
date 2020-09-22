@@ -11,6 +11,6 @@ release:
 	nix eval --show-trace --raw \
 	  '(builtins.toString (builtins.isAttrs ((import ./release.nix {}).nix-lib)))'
 	nix eval --show-trace --raw \
-	  '(builtins.toString (builtins.isAttrs ((import ./release.nix {}).nix-lib.nsfpy)))'
+	  '(builtins.toString (builtins.isAttrs ((import ./release.nix {}).nix-lib.nsfPy)))'
 	nix eval --show-trace --raw \
-	  '(builtins.toString (builtins.isAttrs ((import ./release.nix {}).nix-lib.nsfpy.shell)))'
+	  '(builtins.toString (builtins.isAttrs ((import ./release.nix {}).nix-lib.nsfPy.shell)))'
