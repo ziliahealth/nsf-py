@@ -1,4 +1,6 @@
-{ lib } @ args:
+{ lib
+, writeShellScript
+} @ args:
 
 let
   callPackage = lib.callPackageWith args;

@@ -1,4 +1,6 @@
-{ lib }:
+{ lib
+, writeShellScript
+}:
 
 {
   # Expansion / improvement of 'setuptoolsShellHook' at
@@ -32,8 +34,10 @@
     fi
   '';
 
-
-  shLib = ''
+  # A shell hook lib.
+  # To be sourced as follow from your shell hook:
+  # `source ${nsfPy.shell.shellHookLib}`.
+  shellHookLib = writeShellScript "nsf-py-shell-hook-lib.sh" ''
     # TODO: Make this more concise.
     # Workaround the vscode debugger issue observed when using the bash colon
     # trick.
