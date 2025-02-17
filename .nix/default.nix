@@ -5,9 +5,9 @@
 rec {
   # This constitutes our default nixpkgs.
   nixpkgsSrc = builtins.fetchTarball {
-      # Latest `release-19.09`.
-      url = "https://github.com/jraygauthier/nixpkgs/archive/289466dd6a11c65a7de4a954d6ebf66c1ad07652.tar.gz";
-      sha256 = "0r5ja052s86fr54fm1zlhld3fwawz2w1d1gd6vbvpjrpjfyajibn";
+      rev = "030ba1976b7c0e1a67d9716b17308ccdab5b381e"; # 24.11 - 2025-02-04
+      sha256 = "14rpk53mia7j0hr4yaf5m3b2d4lzjx8qi2rszxjhqq00pxzzr64w";
+      url = "https://github.com/NixOS/nixpkgs/archive/${rev}.tar.gz";
     };
   nixpkgs = nixpkgsSrc;
 
